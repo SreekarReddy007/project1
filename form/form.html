@@ -1,0 +1,238 @@
+<!--<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+     
+        <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+
+        <script>
+                function showMessage(){
+                   alert('Thank You!');
+                  /* console.log(document.getElementById('firstname').value);
+                   console.log(document.getElementById('lastname').value);
+                   console.log(document.getElementById('age').value);
+                   console.log(document.getElementById('email').value);    
+                   console.log(document.getElementById('gender').value);    
+                   console.log(document.getElementById('hobbies').value);*/
+                   //console.log(document.getElementById('Favorite Place').value); 
+                      var bool1 = document.getElementById("hobbies1").checked;
+                       var bool2 = document.getElementById("hobbies2").checked;
+                       var bool3 = document.getElementById("hobbies3").checked;
+                       var bool4 = document.getElementById("hobbies4").checked; 
+                       var gen1=document.getElementById("gender1").checked;
+                       var gen2=document.getElementById("gender2").checked;
+                   var result = {
+                       firstname: document.getElementById('firstname').value,
+                       lastname: document.getElementById('lastname').value,
+                       age: document.getElementById('age').value,
+                       email: document.getElementById('email').value,
+                       gender:{ Gender:gen1 ? document.getElementById("gender1").value:"",
+                                Gender:gen1 ? document.getElementById("gender2").value: ""},
+                       Hobbies: {
+                               hobbiess1: bool1 ? document.getElementById("hobbies1").value : "",
+                               hobbiess2: bool2 ? document.getElementById("hobbies2").value : "",
+                               hobbiess3: bool3 ? document.getElementById("hobbies3").value : "",
+                               hobbiess4: bool4 ? document.getElementById("hobbies4").value : "",
+                           } 
+                      
+                   };
+                    console.log(result);
+                   document.write("firstname:" + firstname.value + "<br>" + "lastname:" + lastname.value + "<br>" + "age:" + age.value + "<br>" + "email:" + email.value );
+               }
+           </script>
+           
+           
+    </head>
+    <body>
+        <div class="columns is-mobile">
+            <div class="column is-half is-offset-one-quarter">
+                <h2 class="has-text-centered is-size-4 is-size-6-mobile has-text-weight-bold">Registration Form</h2>
+                <form class="pure-form" action="" method="GET" id="myForm">
+                    <div class="field">
+                        <label class="label">Firstname</label>
+                        <div class="control"><input id="firstname" class="input" type="text"  placeholder="Enter Firstname" required></div>
+                        <label class="label">Lastname</label>
+                        <div class="control"><input id="lastname" class="input" type="text"  placeholder="Enter Lastname" required></div>
+                        <label class="label">Age</label>
+                        <div class="control"><input id="age" class="input" type="number"  placeholder="enter Age" required></div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Email</label>
+                        <div class="control has-icons-left has-icons-right">
+                            <input id="email" class="input" type="email" required placeholder="Email input">
+                            <span class="icon is-small is-left"><i class="fas fa-envelope"></i></span>
+                            <span class="icon is-small is-right"><i class="fas fa-exclamation-triangle"></i></span>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Gender</label>
+                            <div class="control">
+                                <label class="radio"><input id="gender1" type="radio" value="Male" name="question">Male</label>
+                                <label class="radio"><input id="gender2" type="radio" value="female" name="question">FeMale</label>
+                            </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Hobbies</label>
+                        <div class="control">
+                            <label class="checkbox"><input type="checkbox" id="hobbies1" value="Cricket">Cricket</label><br>
+                            <label class="checkbox"><input type="checkbox" id="hobbies2" value="kabadi">kabadi</label><br>
+                            <label class="checkbox"><input type="checkbox" id="hobbies3"  value="Table tennis">Table tennis</label><br>
+                            <label class="checkbox"><input type="checkbox" id="hobbies4" value="swimming">swimming</label><br>
+                        </div>
+                        </div>
+                    
+
+                    <div class="field is-grouped">
+                        <div class="control"><button type="submit" class="button is-info" value="submit" onclick="showMessage()">Submit</button></div>
+                        <div class="control"><button  type ="reset" value="Cancel" class="button is-danger">Cancel</button></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Input form</title>
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+     
+        <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <style>
+        
+    </style>
+    <script type="text/javascript">
+        function formData() {
+            var boola = document.getElementById("gender1").checked;
+            var boolb = document.getElementById("gender2").checked;
+            var boolc = document.getElementById("gender3").checked;
+            var bool1 = document.getElementById("hobbies1").checked;
+            var bool2 = document.getElementById("hobbies2").checked;
+            var bool3 = document.getElementById("hobbies3").checked;
+            var bool4 = document.getElementById("hobbies4").checked;
+            var obj = {
+
+                name: {
+                    fname: document.getElementById("fname").value,
+                    lname: document.getElementById("lname").value,
+                },
+                Gender: {
+                    gender1: boola ? document.getElementById("gender1").value : "",
+                    gender2: boolb ? document.getElementById("gender2").value : "",
+                    gender3: boolc ? document.getElementById("gender3").value : "",
+                },
+                Age:{ Age:document.getElementById("age").value },
+                password: {password:document.getElementById("password").value},
+                dob:{ dob:document.getElementById("dob").value },
+                favouriteplace: document.getElementById("place").value,
+                email: document.getElementById("email").value,
+                phone: document.getElementById("phone").value,
+                hobbies: {
+                hoobies1: bool1 ? document.getElementById("hobbies1").value : "",
+                hobbies2: bool2 ? document.getElementById("hobbies2").value : "",
+                hobbies3: bool3 ? document.getElementById("hobbies3").value : "",
+                hobbies4: bool4 ? document.getElementById("hobbies4").value : "",
+                },
+               
+            }
+            alert("Thank You");
+            for(var i in obj)
+            console.log(obj[i]);
+        }
+    </script>
+</head>
+
+
+<body>
+
+    <form action="#" method="post" >
+        <div class="columns is-mobile">
+            <div class="column is-half is-offset-one-quarter">
+                    <h2 class="has-text-centered  has-text-weight-bold">Registration Form</h2>
+        
+                <div class="field ">
+                    <label class="label">Firstname</label>
+                    <div class="control"><input id="fname" class="input" type="text"  placeholder="Enter Firstname" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Lastname</label>
+                    <div class="control"><input id="lname" class="input" type="text"  placeholder="Enter Lastname" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Age</label>
+                    <div class="control"><input id="age" class="input" type="number"  placeholder="enter Age" required></div>
+                </div>
+                <div class="field">
+                        <label>Password </label>
+                    
+                        <div class="control"><input type="password" id="password" placeholder="Enter Password" required/></div>
+                    </div>
+                <div class="field">
+                    <label>Gender </label>
+                    <div class="control"><input type="radio" name="gen" id="gender1" value="male" checked/>Male
+                        <input type="radio" name="gen" id="gender2" value="female" />Female
+                        <input type="radio" name="gen" id="gender3" value="other" />Other
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Date of Birth </label>
+                    <div class="control"><input type="date" id="dob" required/></td>
+                </div>
+                <div class="field">
+                    <label>Favourite place </label>
+                    <div class="control">
+                        <select id="place" required>
+                            <option class="is-info">--Select favourite place--</option>
+                            <option>Hyderabad</option>
+                            <option>Bangalore</option>
+                            <option>chennai</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>EMail-id </label>
+                    <div class="control"><input type="email" id="email" placeholder="Enter EMail-id" required></div>
+                </div>
+
+                <div class="field">
+                    <label>Mobile </label>
+                    
+                    <div class="control "><input type="tel "  id="phone" placeholder="Enter Mobile number" maxlength="10" required></div>
+                    </div>
+               
+                <div class="field ">
+                    <label class="label">Hobbies</label>
+                    <div class="control">
+                        <label class="checkbox"><input type="checkbox" id="hobbies1" value="Cricket">Cricket</label><br>
+                        <label class="checkbox"><input type="checkbox" id="hobbies2" value="kabadi">kabadi</label><br>
+                        <label class="checkbox"><input type="checkbox" id="hobbies3"  value="Table tennis">Table tennis</label><br>
+                        <label class="checkbox"><input type="checkbox" id="hobbies4" value="swimming">swimming</label><br>
+                    </div>
+                    </div>
+
+        <center>
+            <input type="button"  class="button is-info"id="submit" value="SUBMIT" onclick=" formData() " />
+            <input type="reset"  class=" button is-danger"id="reset " value="RESET ">
+        </center>
+        </div>
+        </div>
+    </form>
+
+</body>
+
+</html>
+

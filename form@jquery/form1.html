@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Input form</title>
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+     
+        <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+        <script src="assets/jquery-3.3.1.min.js"></script>
+        <script src="assets/script.js"></script>
+    <style>
+        
+    </style>
+    </head>
+    <body>
+    
+        <form action="#" method="post" id="form" >
+            <div class="columns is-mobile">
+                <div class="column is-half is-offset-one-quarter">
+                  <h2 class="has-text-centered  has-text-weight-bold">Registration Form</h2>
+            
+                    <div class="field ">
+                        <label class="label">Firstname</label>
+                        <div class="control"><input id="fname" class="input" type="text"  placeholder="Enter Firstname" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Lastname</label>
+                        <div class="control"><input id="lname" class="input" type="text"  placeholder="Enter Lastname" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Age</label>
+                        <div class="control"><input id="age" class="input" type="number"  placeholder="enter Age" required></div>
+                    </div>
+                    <div class="field">
+                            <label>Password </label>
+                        
+                            <div class="control"><input type="password" id="password" placeholder="Enter Password" required/></div>
+                        </div>
+                    <div class="field">
+                        <label>Gender </label>
+                        <div class="control"><input type="radio" name="gen" id="gender1" value="male" checked/>Male
+                            <input type="radio" name="gen" id="gender2" value="female" />Female
+                            <input type="radio" name="gen" id="gender3" value="other" />Other
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>Date of Birth </label>
+                        <div class="control"><input type="date" id="dob" required/></td>
+                    </div>
+                    <div class="field">
+                        <label>Favourite place </label>
+                        <div class="control">
+                            <select id="place" required>
+                                <option class="is-info">--Select favourite place--</option>
+                                <option>Hyderabad</option>
+                                <option>Bangalore</option>
+                                <option>chennai</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>EMail-id </label>
+                        <div class="control"><input type="email" id="email" placeholder="Enter EMail-id" required></div>
+                    </div>
+    
+                    <div class="field">
+                        <label>Mobile </label>
+                        
+                        <div class="control "><input type="tel "  id="phone" placeholder="Enter Mobile number" maxlength="10" required></div>
+                        </div>
+                   
+                    <div class="field ">
+                        <label class="label">Hobbies</label>
+                        <div class="control">
+                            <label class="checkbox"><input type="checkbox" id="hobbies1" value="Cricket">Cricket</label><br>
+                            <label class="checkbox"><input type="checkbox" id="hobbies2" value="kabadi">kabadi</label><br>
+                            <label class="checkbox"><input type="checkbox" id="hobbies3"  value="Table tennis">Table tennis</label><br>
+                            <label class="checkbox"><input type="checkbox" id="hobbies4" value="swimming">swimming</label><br>
+                        </div>
+                        </div>
+    
+            <center>
+                <input type="submit"  class="button is-info" id="submit" value="SUBMIT">
+                <input type="reset"  class=" button is-danger" id="reset " value="RESET">
+            </center>
+            </div>
+            </div>
+        </form>
+    
+    </body>
+    
+    </html>
+    
+    
